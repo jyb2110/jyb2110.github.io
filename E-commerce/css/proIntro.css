@@ -1,0 +1,732 @@
+/*商品详细页 - 下单 - 评价  样式表*/
+body{
+    background: #f0f0f0;
+}
+
+/*商品规格、颜色、数量选择    start*/
+.specifications{
+    width: 1000px;
+    margin: 10px auto;
+}
+/*当前所在站内路径*/
+.specifications .path a{
+    display: inline-block;
+    height: 46px;
+    line-height: 46px;
+    font-size: 12px;
+}
+.specificationsBox{
+    width: 998px;
+    height: 588px;
+    border: 1px solid #cccccc;
+    margin: 0 auto;
+    background: #FFF;
+}
+/*左侧图片展示   start*/
+.left_img{
+    width: 308px;
+    height: 588px;
+    border-right: 1px solid #ccc;
+}
+.left_img .big_img{
+    margin: 18px 53px;
+}
+.left_img .small_img{
+    margin: 5px 21px;
+}
+/*左侧图片展示    end*/
+/*右侧颜色、规格选择   start*/
+.right_select{
+    width: 689px;
+    float: right;
+}
+.right_select_con{
+    margin: 24px 10px;
+}
+.right_select_con dl.address{
+    background: #f2f2f2;
+    padding: 20px 0;
+}
+.right_select_con dd{
+    margin-bottom: 15px;
+}
+.right_select_con h2{
+    font:16px 'microsoft yahei';
+    color: #333;
+    font-weight:bold;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+.right_select_con dt{
+    float: left;
+    width: 60px;
+    font: 12px '新宋体',serif;
+    color: #666;
+    padding-left: 10px;
+}
+.right_select_con dt.mooc{
+    height: 29px;
+    line-height: 29px;
+}
+.right_select_con dt.songda{
+    height: 19px;
+    line-height: 19px;
+}
+.right_select_con dt.yanse{
+    height: 34px;
+    line-height: 34px;
+}
+.right_select_con dt.guige{
+    height: 26px;
+    line-height: 26px;
+}
+.right_select_con dt.shuliang{
+    height: 34px;
+    line-height: 34px;
+}
+.right_select_con dd.price{
+    font:22px 'microsoft yahei',serif;
+    color: #d70000;
+}
+.right_select_con .benefit{
+    display: inline-block;
+    width: 55px;
+    height: 18px;
+    color: #FFF;
+    background: url("../image/icon/discount_bg.png") left center no-repeat;
+    text-align: right;
+    line-height: 18px;
+}
+.right_select_con dd span{
+    color: #555;
+}
+.right_select_con dd.color a{
+    display: inline-block;
+    width: 82px;
+    height: 32px;
+    border: 1px solid #cccccc;
+    background: #FFF;
+    color: #000;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 10px;
+}
+.right_select_con dd.color a:hover{
+    border-color: #317ee7;
+}
+.right_select_con dd.color a.active{
+    border: 1px solid #317ee7;
+}
+.right_select_con dd.signal a{
+    display: inline-block;
+    height: 24px;
+    border: 1px solid #cccccc;
+    background: #FFF;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 5px;
+    margin-right: 10px;
+}
+.right_select_con dd.signal a:hover{
+    border-color:#317ee7;
+}
+.right_select_con dd.signal a.active{
+    border: 1px solid #317ee7;
+}
+.right_select_con .btn{
+    display: inline-block;
+    width: 18px;
+    height: 32px;
+    border: 1px solid #b2b2b2;
+    background: #f3f3f3;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+.right_select_con .number{
+    width: 50px;
+    height: 30px;
+    background: #FFF;
+    text-align: center;
+    outline: none;
+    padding: 0;
+}
+.right_select_con .number,.right_select_con #reduce{
+    float: left;
+}
+
+
+
+.selected{
+    font: 12px '宋体',serif;
+    padding: 10px;
+}
+.selected h3{
+    color: #666666;
+}
+.selected h3 span{
+    color: #0479ca;
+}
+.buy{
+    width: 100%;
+    height: 90px;
+}
+.buy div{
+    width: 284px;
+    height: 90px;
+    float: left;
+    margin-left: 20px;
+}
+.buy div.in_shopcar{
+    border-right: 1px solid #e5e5e5;
+}
+.buy div a{
+    display: inline-block;
+    width: 184px;
+    height: 48px;
+    line-height: 48px;
+    background: #f98700;
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+    margin: 22px 40px;
+}
+.buy div a span{
+    margin: 0 13px;
+}
+.selected span{
+    color: #999;
+}
+/*右侧颜色、规格选择   end*/
+/*商品规格、颜色、数量选择    end*/
+
+
+/*剩余主体（同价位、评价、咨询等）部分   start*/
+/*左侧同价位  start*/
+.evaluate{
+    width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.leftRecommend{
+    width: 200px;
+}
+.samePrice{
+    width: 200px;
+}
+.samePrice_tit{
+    width: 188px;
+    height: 40px;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-top: 3px solid #1d86cf;
+}
+.samePrice_tit h3{
+    font: 14px/40px '新宋体',serif;
+    color: #333333;
+    font-weight:bold;
+    padding-left: 10px;
+}
+.samePrice_con{
+    width: 188px;
+    border: 1px solid #ccc;
+    background: #FFF;
+}
+.samePrice_con .imgBox{
+    text-align: center;
+}
+.samePrice_con li{
+    padding: 10px;
+    margin-top: 10px;
+}
+.samePrice_con li span{
+    font: 12px '新宋体',serif;
+    color:#999999;
+}
+.samePrice_con li span.price{
+    font: 12px 'microsoft yahei',serif;
+    color: #de0000;
+    font-weight:bold;
+}
+/*左侧同价位  end*/
+
+/*看了最终买   start*/
+.lastBuy{
+    width: 188px;
+    margin-top: 20px;
+}
+.lastBuy_tit{
+    width: 188px;
+    height: 40px;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-top: 3px solid #1d86cf;
+}
+.lastBuy_tit h3{
+    padding-left: 10px;
+    line-height: 40px;
+}
+.lastBuy_con{
+    width: 188px;
+    border: 1px solid #ccc;
+    background: #FFF;
+}
+.lastBuy_con li{
+    padding: 10px;
+    margin-top: 10px;
+}
+.lastBuy_con li .imgBox{
+    text-align: center;
+}
+.lastBuy_con li span{
+    font: 12px '新宋体',serif;
+    color: #999999;
+}
+.lastBuy_con li span.price{
+    color:#de0000;
+    font-weight:bold;
+}
+/*看了最终买   end*/
+
+/*评价、介绍   start*/
+.rightComment{
+    width: 787px;
+    float: right;
+}
+/*comment_head  start*/
+.comment_head{
+    width: 787px;
+    height: 40px;
+    border-top: 1px solid #d7d7d7;
+}
+.comment_head_left{
+    float: left;
+    border-right: 1px solid #d7d7d7;
+}
+.comment_head_right{
+    float: left;
+}
+/*.comment_head_left span{
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background: url("../image/icon/product.png") left top no-repeat;
+}
+.comment_head_right span{
+    display: inline-block;
+    width: 19px;
+    height: 18px;
+    background: url("../image/icon/comment.png") left top no-repeat;
+}*/
+.comment_head_left a{
+    display: inline-block;
+    width: 392px;
+    height: 40px;
+    background: #efefef;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
+    border-left: 1px solid #d7d7d7;
+}
+.comment_head_right a{
+    display: inline-block;
+    width: 392px;
+    height: 40px;
+    background: #efefef;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
+    border-right: 1px solid #d7d7d7;
+}
+.comment_head .active{
+    background: #0479ca;
+    color: #FFF;
+}
+/*comment_head  end*/
+
+/*产品介绍    start*/
+.proIntro{
+    width: 765px;
+    /*height: 1092px;*/
+    border: 1px solid #d7d7d7;
+    padding: 0 10px;
+    background: #FFF;
+}
+.proIntro .ad{
+    width: 765px;
+    text-align: center;
+    padding: 30px 0;
+}
+.proIntro .recommend{
+    width: 765px;
+}
+.proIntro .recommend_tit{
+    width: 765px;
+    height: 40px;
+}
+.proIntro .recommend_tit h3{
+    font:16px 'microsoft yahei',serif;
+    color: #2457a6;
+    width: 74px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 2px solid #2457a6;
+    text-align: center;
+    float: left;
+    margin-right: 5px;
+}
+.proIntro .recommend_tit h4,.proIntro .img_show_tit h4{
+    font: 12px 'microsoft yahei',serif;
+    height: 38px;
+    line-height: 38px;
+    color: #666;
+    border-bottom: 2px solid #d7d7d7;
+}
+.proIntro .recommend_con{
+    font: 14px '宋体',serif;
+    color: #666;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.proIntro .img_show{
+    width: 765px;
+}
+.proIntro .img_show .img_show_tit h3{
+    font:16px 'microsoft yahei',serif;
+    color: #2457a6;
+    width: 74px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 2px solid #2457a6;
+    float: left;
+    text-align: center;
+}
+.proIntro .img_show .img_show_con{
+    font: 14px '宋体',serif;
+    color: #666;
+    padding-top: 20px;
+    line-height: 2;
+}
+/*产品介绍    end*/
+
+
+/*评价  start*/
+.location{
+    width: 787px;
+    height: 40px;
+}
+.comment{
+    width: 785px;
+    border: 1px solid #d7d7d7;
+}
+.satisfied{
+    width: 765px;
+    height: 138px;
+    background: #FFF;
+    padding: 10px;
+}
+
+.satisfied .shopComment{
+    font:14px '新宋体',serif;
+    color: #666;
+}
+.satisfied dl{
+    width: 450px;
+}
+.satisfied dt{
+    width: 100px;
+    height: 60px;
+    float: left;
+}
+.satisfied dt{
+    font:18px 'microsoft yahei',serif;
+    color: #66667d;
+}
+.satisfied dt .score{
+    font: 50px 'microsoft yahei',serif;
+    color: #ff8f00;
+}
+.satisfied dd{
+    width: 450px;
+    height: 60px;
+    margin-left: 100px;
+}
+.satisfied dd .score_bg{
+    text-align: right;
+    padding-right: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: url("../image/icon/score_bg.png") 408px center no-repeat;
+    font: 12px 'microsoft yahei',serif;
+    color: #FFF;
+    width: 430px;
+}
+.satisfied dd .satisfied_bg{
+    width: 450px;
+    height: 16px;
+    background: #bdbdbd;
+    line-height: 16px;
+}
+.satisfied dd .satisfied_bg span{
+    font-size: 12px;
+    color: #FFF;
+    margin-left: 42px;
+}
+.satisfied dd .satisfied_bg span:first-child{
+    margin-left: 30px;
+}
+.satisfied dd .join_comment span{
+    font: 12px '新宋体',serif;
+    line-height: 24px;   /*行高不起作用--原因：设置了字体，取消设置字体或在设置行高前设置字体便可解决*/
+    color: #66667d;
+}
+.comment_Con{
+    width: 785px;
+}
+.comment_Satisfied{
+    width: 785px;
+    height: 32px;
+    background: #f2f2f2;
+}
+.comment_Satisfied a{
+    display: inline-block;
+    font:12px '新宋体',serif;
+    color: #000;
+    font-weight:bold;
+    margin-right: 45px;
+    line-height: 26px;
+    margin-top: 3px;
+    padding: 0 5px;
+}
+.comment_Satisfied h3{
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+    border-bottom:none;
+    padding: 0 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.comment_Satisfied .sort{
+    margin-right: 15px;
+}
+.comment_Satisfied h3 span{
+    display: inline-block;
+    width: 11px;
+    height: 12px;
+    background: url("../image/icon/sort.png") left center no-repeat;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+.comment_Satisfied a:hover{
+    color: #317ee7;
+    border-bottom: 3px solid #317ee7
+}
+.comment_Satisfied a:first-child{
+    margin-left: 20px;
+}
+.comment_Satisfied .active{
+    border-bottom: 3px solid #317ee7;
+    color: #317ee7;
+}
+.comment_main{
+    width: 705px;
+    padding: 18px 40px;
+    color: #777777;
+    background: #FFF;
+}
+.comment_human{
+    width: 705px;
+    height: 91px;
+    margin-bottom: 38px;
+}
+.comment_Con .head_portrait{
+    width: 60px;
+    height: 91px;
+    float: left;
+    text-align: center;
+}
+.comment_Con .comment_text{
+    width: 460px;
+    height: 91px;
+    margin-left: 70px;
+    line-height: 26px;
+    float: left;
+}
+.comment_Con .comment_text .wufen{
+    font:12px '宋体',serif;
+    font-weight:bold;
+    color: #000;
+}
+.comment_Con .comment_text span a{
+    color: #085c9b;
+}
+.comment_Con .comment_date{
+    height: 91px;
+    float: right;
+}
+.comment_Con .page{
+    text-align: right;
+}
+.comment_main .page a{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    background: #FFF;
+    color: #000;
+    border: 1px solid #D9D9D9;
+    margin-right: 5px;
+}
+.comment_main .page a.active{
+    color: #FF0000;
+    background: #e9e9e9;
+    font-weight:bold;
+}
+.comment_main .page a:hover{
+    background: #e9e9e9;
+}
+.comment_main .page .prev,.comment_main .page .next{
+    width: 64px;
+    color: #085c9b;
+}
+.comment_Con .comment_main .page .go{
+    width: 28px;
+    height: 19px;
+    border: 1px solid #d3d3d3;
+}
+/*评价  end*/
+/*评价、介绍   end*/
+
+/*咨询  start*/
+.consult{
+    width: 787px;
+    margin-top: 15px;
+    background: #FFF;
+}
+.consult .consult_tit{
+    height: 32px;
+}
+.consult .consult_tit h3{
+    width: 130px;
+    height: 32px;
+    font: 14px '宋体',serif;
+    line-height: 32px;
+    text-align: center;
+    border-top:1px solid #0688ba;
+    border-left:1px solid #0688ba;
+    border-right:1px solid #0688ba;
+    color: #076ebb;
+    font-weight: bold;
+    float: left;
+}
+.consult .consult_tit h4{
+    height: 32px;
+    line-height: 32px;
+    text-align: right;
+    padding-right: 15px;
+    border-bottom:1px solid #0688ba;
+    margin-left: 132px;
+}
+.consult .consult_tit h4 a{
+    font: 12px '宋体',serif;
+    color: #085c9b;
+}
+.consult .consult_con{
+    width: 727px;
+    padding: 0 30px;
+}
+.consult .consult_con .tips{
+    margin: 10px 0;
+    padding: 10px;
+    background: #f3f3f3;
+}
+.consult .consult_con .tips span{
+    font: 12px '宋体',serif;
+    color: #777777;
+    line-height: 2;
+}
+.consult_main{
+    overflow: hidden;
+}
+.consult_human{
+    overflow: hidden;
+    margin: 18px 0;
+}
+.consult_human .head_portrait{
+    width: 118px;
+    text-align: center;
+    float: left;
+}
+.consult_human .consult_class{
+    width: 606px;
+    float: left;
+}
+.consult_human .consult_class span{
+    font: 12px '宋体',serif;
+    color: #777777;
+    line-height: 25px;
+}
+.consult_human .consult_class span.consult_shop{
+    font-weight:bold;
+    color: #000;
+}
+.consult_human .consult_class span.consult_date{
+    float: right;
+}
+.consult_human .consult_class span.reply{
+    color: #000;
+}
+.consult_human .consult_class .replyBox .triangle {
+    color: #f1f1f1;
+}
+.consult_human .consult_class .replyBox .reply_text{
+    display: inline-block;
+    width: 550px;
+    background: #f1f1f1;
+    padding: 20px 28px;
+    margin-top: -13px;
+ }
+/*咨询部分页码    start*/
+.consult_con .page{
+    clear: both;
+    text-align: right;
+    padding: 20px 0;
+}
+.consult_con .page a{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    font: 14px '宋体',serif;
+    line-height: 23px;
+    border: 1px solid #d3d3d3;
+    color: #085c9b;
+    text-align: center;
+    margin-right:5px;
+}
+.consult_con .page a:hover{
+    background: #e9e9e9;
+}
+.consult .consult_con .page a.selected{
+    background: #e9e9e9;
+    color: #FF0000;
+    padding: 0;
+}
+.consult_con .page a.prev,.consult_con .page a.next{
+    width: 64px;
+}
+.consult_con .page .go{
+    width: 28px;
+    height: 19px;
+}
+.consult_con .page span{
+    color:#777777;
+}
+/*咨询部分页码    end*/
+/*咨询  end*/
+/*剩余主体（同价位、评价、咨询等）部分   end*/

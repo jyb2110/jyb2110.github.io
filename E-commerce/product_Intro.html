@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详细页 - 介绍</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/top_bar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/logo_nav.css">
+    <link rel="stylesheet" href="css/proIntro.css">
+    <link rel="stylesheet" href="css/go_top.css">
+</head>
+<body>
+<!--顶部top部分-->
+<div class="top">
+    <!--top_bar    start-->
+    <div class="top_bar">
+        <div class="containerBox">
+            <div class="rightArea" id="rightArea">欢迎来到慕课网！<a href="login.html">[请登录]</a><a href="register.html">[免费注册]</a><a href="javascript:;"><span id="userN"></span></a>&nbsp;<a
+                    href="javascript:deleteCookie();" id="lgOut"></a></div>
+        </div>
+    </div>
+
+    <!--logo   start-->
+    <div class="logo">
+        <div class="containerBox">
+            <div class="left_logo fl"><a href="index.html"><img src="image/logo_mooc.png" alt="慕课网"></a></div>
+            <div class="search_box fl">
+                <input class="search_text" type="text" placeholder="搜索热卖">
+                <input class="search_btn fr" type="button" value="搜索">
+            </div>
+            <div class="right_logo fr">
+                <div class="shopBox">
+                    <div class="shopCar fl"><a href="shopcar.html">购物车</a></div>
+                    <div class="shopNumber fr">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航栏nav  start-->
+    <div class="navBox">
+        <div class="containerBox">
+            <div class="shopClass fl">
+                <h3>全部商品分类<i></i></h3>
+                <!--全部商品分类下的商品分类列表-->
+
+                <!--商品分类列表二级菜单列表弹出层-->
+
+            </div>
+            <!--导航菜单-->
+            <ul class="nav fl">
+                <li><a href="#">数码城</a></li>
+                <li><a href="#">天黑黑</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">发现</a></li>
+                <li><a href="#">二手特卖</a></li>
+                <li><a href="#">名品会</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--商品颜色、规格、数量选择-->
+<div class="specifications">
+    <!--当前所在站内路径-->
+    <div class="path"><a href="#" style="font-weight:bold">首页</a> &gt; <a href="#">平板电脑</a>
+        &gt; <a href="#">Apple 苹果</a> &gt; <a href="#">MD531CH/A</a>
+    </div>
+    <!--商品颜色、规格、数量选择-->
+    <div class="specificationsBox">
+        <!--左侧图片展示-->
+        <div class="left_img fl">
+            <div class="big_img"><img src="image/icon/ipad_mini.png" alt="Apple_ipad_mini"></div>
+            <div class="small_img">
+                <img src="image/icon/ipad_mini_small.png" alt="ipad_mini缩略图">
+            </div>
+        </div>
+        <!--右侧颜色、规格、数量选择-->
+        <div class="right_select">
+            <div class="right_select_con">
+                <h2>全网底价 Apple 苹果 iPad mini 16G wifi版 平板电脑 前白后银 MD531CH/A 银白两色
+                    生产批次不同混合发货</h2>
+                <dl>
+                    <dt class="mooc">慕课价</dt>
+                    <dd class="price">¥1999.00</dd>
+                    <dt class="youhui">优惠</dt>
+                    <dd><span class="benefit">满换购</span> <span>购ipad加价优惠够配件或USB充电插座</span></dd>
+                </dl>
+                <dl class="address">
+                    <dt class="songda">送到</dt>
+                    <dd>
+                        <select id="province"></select>
+                        <select id="city"></select>
+                        <select id="district"></select>
+                        <span id="stock"></span>
+                    </dd>
+                    <dt class="yanse">选择颜色</dt>
+                    <dd class="color" id="sel_Color"><a class="active" href="javascript:;">白色</a><a href="javascript:;">黑色</a><a href="javascript:;">灰色</a></dd>
+                    <dt class="guige">选择规格</dt>
+                    <dd class="signal" id="sel_Format"><a class="active" href="javascript:;">WIFI 16G</a><a href="javascript:;">WIFI 32G</a><a href="javascript:;">WIFI 64G</a><a href="javascript:;">WIFI Cellular 16G</a><a href="javascript:;">WIFI Cellular 32G</a><a href="javascript:;">WIFI Cellular 64G</a></dd>
+                    <dt class="shuliang">数量</dt>
+                    <dd>
+                        <span class="btn" id="reduce"></span><input type="text" class="number" id="number" value="1"><span class="btn" id="add">+</span></dd>
+                </dl>
+                <div class="selected">
+                    <h3>已选择 <span id="color_text">“白色|</span><span id="format_text">WIFI 16G”</span></h3><br>
+                    <div class="buy">
+                        <div class="in_shopcar"><a href="#"><span><img src="image/icon/shopcar.png" alt="购物车"></span>加入购物车</a></div>
+                        <div><a href="#"><span><img src="image/icon/shopcar.png" alt="购物车"></span>立即购买</a></div>
+                    </div>
+                    <br><br><br>
+                    <span>注意：此商品可提供普通发票，不提供增值税发票。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--剩余主体（同价位、评价、咨询等）部分-->
+<div class="evaluate">
+    <!--左侧-->
+    <div class="leftRecommend">
+        <div class="samePrice fl">
+            <!--同价位-->
+            <div class="samePrice_tit"><h3>同价位</h3></div>
+            <div class="samePrice_con">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                        <div class="imgBox"><img src="image/icon/samsung_phone.png" alt="三星手机"></div>
+                        <br>
+                        <span>Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</span><br>
+                        <span class="price">¥3588.00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><div class="imgBox"><img src="image/icon/samsung_phone.png" alt="三星手机"></div>
+                        <br>
+                        <span>Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</span><br>
+                        <span class="price">¥3588.00</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><div class="imgBox"><img src="image/icon/samsung_phone.png" alt="三星手机"></div>
+                        <br>
+                        <span>Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</span><br>
+                        <span class="price">¥3588.00</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><div class="imgBox"><img src="image/icon/samsung_phone.png" alt="三星手机"></div>
+                        <br>
+                        <span>Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</span><br>
+                        <span class="price">¥3588.00</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--看了最终买-->
+            <div class="lastBuy">
+                <div class="lastBuy_tit"><h3>看了最终买</h3></div>
+                <div class="lastBuy_con">
+                    <ul>
+                        <li>
+                            <a href="javascript:;"><div class="imgBox"><img src="image/icon/ipad_mini2.png" alt="ipad_mini2"></div>
+                            <br>
+                            <span>Apple 苹果 iPaad mini 配备 Retina 显示屏 ME280CH/A</span>
+                            <span class="price">¥3588.00</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div class="imgBox"><img src="image/icon/ipad_mini2.png" alt="ipad_mini2"></div>
+                            <br>
+                            <span>Apple 苹果 iPaad mini 配备 Retina 显示屏 ME280CH/A</span>
+                            <span class="price">¥3588.00</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div class="imgBox"><img src="image/icon/ipad_mini2.png" alt="ipad_mini2"></div>
+                            <br>
+                            <span>Apple 苹果 iPaad mini 配备 Retina 显示屏 ME280CH/A</span>
+                            <span class="price">¥3588.00</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--右侧-->
+    <div class="rightComment">
+        <!--产品介绍 和 商品评价-->
+        <div class="comment_head" id="comment_head">
+            <div class="fixed_Container" id="fixed_Container">
+                <div class="comment_head_left"><a class="active" href="#comment_head"><span></span>产品介绍</a></div>
+                <div class="comment_head_right"><a href="#location"><span></span>商品评论(1465)</a>
+                </div>
+            </div>
+        </div>
+        <!--产品介绍-->
+        <div class="proIntro" id="proIntro">
+            <div class="ad">
+                <img src="image/icon/productintro_ad.png" alt="产品介绍广告">
+            </div>
+            <div class="recommend">
+                <div class="recommend_tit"><h3>强烈推荐</h3><h4>货比三家，还选</h4></div>
+                <div class="recommend_con">
+                    现在就是买mini的好时候！换代清仓直降，但苹果品质不变！A5双核，内置Lightning闪电接口，正反可插，方便人性。小身材，炫丽的7.9英寸显示屏，7.2mm的厚度，薄如铅笔。女生包包随身携带更时尚！facetime视频通话，与密友24小时畅聊不断线。微信倾力打造，你的智能助理。苹果的牌子就不用我说了，1111补仓，存货不多哦！
+                </div>
+            </div>
+            <div class="img_show">
+                <div class="img_show_tit"><h3>精美图片</h3><h4></h4></div>
+                <div class="img_show_con"><span>苹果iPad7.9 英寸显示屏可带来新的iPad体验，绚丽的显示屏，在每一寸画面中呈现灵动鲜活的美妙影像。<br>苹果miniMD528CH/A采用500 万像素 iSight 摄像头，清晰记录每一次的幸福。</span><br><img
+                        src="image/icon/productintro_imgshow.png" alt="图片介绍展示"></div>
+            </div>
+        </div>
+
+        <!--评价-->
+        <div class="location" id="location"></div>
+        <div class="comment" id="comment">
+            <div class="satisfied">
+                <span class="shopComment">商品评价</span><br>
+                <dl>
+                    <dt><span class="score">4.7</span>分</dt>
+                    <dd>
+                        <div class="score_bg"><span>4.7</span></div>
+                        <div class="satisfied_bg"><span>非常不满意</span> <span>不满意</span> <span>一般</span>
+                            <span>满意</span><span>非常满意</span></div>
+                        <div class="join_comment"><span>共18939位慕课网友参与评分</span></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="comment_Con">
+                <div class="comment_Satisfied"><a class="active" href="#">全部</a><a href="#">满意(12347)</a><a href="#">一般(345)</a><a
+                        href="#">不满意(34)</a>
+                    <h3 class="sort">推荐排序<span></span></h3>
+                    <h3>时间排序<span></span></h3></div>
+                <div class="comment_main">
+                    <div class="comment_human">
+                        <div class="head_portrait"><img src="image/icon/head_portrait.png"
+                                                        alt="用户头像"><br><span>72***23</span><br><span>金色会员</span></div>
+                        <div class="comment_text">
+                            <span class="wufen">★★★★★ 5分 满意</span><br>
+                            <span class="text">挺不错的，信赖慕课不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的</span><br>
+                            <span><a href="#">踩(0) 顶(0)</a></span>
+                        </div>
+                        <div class="comment_date"><span>2014-03-07 17:41:44</span></div>
+                    </div>
+                    <div class="comment_human">
+                        <div class="head_portrait"><img src="image/icon/head_portrait.png"
+                                                        alt="用户头像"><br><span>72***23</span><br><span>金色会员</span></div>
+                        <div class="comment_text">
+                            <span class="wufen">★★★★★ 5分 满意</span><br>
+                            <span class="text">挺不错的，信赖慕课，信赖慕课，信赖慕课，信赖慕课</span><br>
+                            <span><a href="#">踩(0) 顶(0)</a></span>
+                        </div>
+                        <div class="comment_date"><span>2014-03-07 17:41:44</span></div>
+                    </div>
+                    <div class="comment_human">
+                        <div class="head_portrait"><img src="image/icon/head_portrait.png" alt="用户头像"><br><span>72***23</span><br><span>金色会员</span></div>
+                        <div class="comment_text">
+                            <span class="wufen">★★★★★ 5分 满意</span><br>
+                            <span class="text">挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课挺不错的，信赖慕课</span><br>
+                            <span><a href="#">踩(0) 顶(0)</a></span>
+                        </div>
+                        <div class="comment_date"><span>2014-03-07 17:41:44</span></div>
+                    </div>
+                    <div class="page">
+                        <a class="prev" href="#">&lt;上一页</a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a>...<a href="#">79</a><a class="next" href="#">下一页&gt;</a>到第<input class="go" type="text" value="1">页<input type="button" value="确定">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--咨询 部分-->
+        <div class="consult">
+            <div class="consult_tit"><h3>全部咨询(705)</h3><h4><a href="javascript:;">发表咨询</a></h4></div>
+            <div class="consult_con">
+                <div class="tips">
+                    <span>提示:因厂家更改产品包装、产地或者更换随机附件等没有任何提前通知，且每位咨询者购买情况、提问时间等不同，为此以下回复信息仅供参考！若由此给您带来不便请多多谅解，谢谢！</span>
+                </div>
+                <div class="consult_main">
+                    <div class="consult_human">
+                        <div class="head_portrait"><img src="image/icon/head_portrait2.png"
+                                                        alt="用户头像"><br><span>12***45</span><br><span>土星会员</span></div>
+                        <div class="consult_class">
+                            <div class="date"><span class="consult_shop">[商品咨询]</span><span class="consult_date">2016-10-1 17:23:41</span>
+                            </div>
+                            <div class="consult_textBox"><span class="consult_text">还能再便宜点么？</span></div>
+                            <div class="replyBox">
+                                <span class="triangle">&nbsp;&nbsp;◆</span>
+                                <span class="reply_text"><span class="reply">慕课网回复:</span>您好，现在已经是活动价格了</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consult_human">
+                        <div class="head_portrait"><img src="image/icon/head_portrait2.png"
+                                                        alt="用户头像"><br><span>12***45</span><br><span>土星会员</span></div>
+                        <div class="consult_class">
+                            <div class="date"><span class="consult_shop">[商品咨询]</span><span class="consult_date">2016-10-1 17:23:41</span>
+                            </div>
+                            <div class="consult_textBox"><span class="consult_text">还能再便宜点么？再便宜点么？再便宜点么？</span></div>
+                            <div class="replyBox">
+                                <span class="triangle">&nbsp;&nbsp;◆</span>
+                                <span class="reply_text"><span class="reply">慕课网回复:</span>您好，现在已经是活动价格了</span></div>
+                        </div>
+                    </div>
+                    <div class="consult_human">
+                        <div class="head_portrait"><img src="image/icon/head_portrait2.png"
+                                                        alt="用户头像"><br><span>12***45</span><br><span>土星会员</span></div>
+                        <div class="consult_class">
+                            <div class="date"><span class="consult_shop">[商品咨询]</span><span class="consult_date">2016-10-1 17:23:41</span>
+                            </div>
+                            <div class="consult_textBox"><span class="consult_text">还能再便宜点么？能再便宜点么？能再便宜点么？能再便宜点么？</span>
+                            </div>
+                            <div class="replyBox">
+                                <span class="triangle">&nbsp;&nbsp;◆</span>
+                                <span class="reply_text"><span class="reply">慕课网回复:</span>您好，现在已经是活动价格了</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <a class="prev" href="#">&lt;上一页</a><a class="selected" href="#">1</a><a href="#">2</a><a
+                        class="next" href="#">下一页&gt;</a><span>到第<input class="go" type="text" value="1">页</span>
+                    <input type="button" value="确定">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部foot部分-->
+<div class="foot">
+    <div class="containerBox">
+        <br><br><br><br>
+        <p><a href="#">慕课简介</a> | <a href="#">慕课公告</a> | <a href="#">招纳贤士</a> | <a href="#">联系我们</a> | 客服热线：400-675-1234<br/><br>Copyright
+            © 2006 - 2014 慕课版权所有 京ICP备09037834号 京ICP证B1034-8373号 某市公安局XX分局备案编号：123456789123</p>
+        <br><br><br>
+        <img src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                               alt="">&nbsp;&nbsp;<img
+            src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                              alt="">
+    </div>
+</div>
+
+<!--返回顶部按钮-->
+<a href="javascript:;" id="goTop_btn" class="goTop_btn"></a>
+
+<script type="text/javascript" src="js/gather.js"></script>
+<script type="text/javascript" src="js/proIntro.js"></script>    <!--选择送达地址处的级联菜单-->
+<script type="text/javascript" src="js/getCookie.js"></script>
+</body>
+</html>

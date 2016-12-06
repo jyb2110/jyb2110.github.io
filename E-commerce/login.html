@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/login_style.css">
+</head>
+<body>
+<!--顶部top部分-->
+<div class="top">
+    <div class="containerBox">
+        <div class="top_bar">
+            <a href="index.html"><img src="image/logo_mooc.png" alt="慕课网"></a>
+            <h3>欢迎登录</h3>
+        </div>
+    </div>
+</div>
+
+
+<!--登陆框主体-->
+<div class="containerBox">
+    <div class="frameBox">
+        <form action="index.html" onsubmit="return login()" name="valiForm" method="post">
+            <p>邮箱/用户名/已验证手机：</p>
+            <input type="text" id="username" class="username" name="username"><br>
+            <span id="userTips"></span>
+            <p>密码</p>
+            <input type="password" id="pwd" class="pwd" name="pwd"><br>
+            <span id="pwdTips"></span>
+            <p class="p1"><input type="checkbox" id="a1"><label for="a1">自动登录</label>&nbsp;
+                <input type="checkbox" id="a2"><label for="a2">安全登录控件</label>&nbsp;
+                <span><a href="javascript:;">忘记密码?</a></span></p>
+            <input type="submit" value="登录" class="login_btn">
+        </form>
+        <div class="otherWeb">
+            <span>使用合作网站账号登录:</span><br>
+            <ul>
+                <li><a href="#">QQ</a></li>
+                <li>|</li>
+                <li><a href="#">网易</a></li>
+                <li>|</li>
+                <li><a href="#">人人</a></li>
+                <li>|</li>
+                <li><a href="#">奇虎360</a></li>
+                <li>|</li>
+                <li><a href="#">豆瓣</a></li>
+                <li>|</li>
+                <li><a href="#">搜狐</a></li>
+                <li>|</li>
+                <li><a href="#">更多</a></li>
+            </ul>
+        </div>
+        <div class="reg_link"><a href="register.html"></a></div>
+    </div>
+</div>
+
+<!--底部foot部分-->
+<div class="foot">
+    <div class="containerBox">
+        <br><br><br><br>
+        <p><a href="#">慕课简介</a> | <a href="#">慕课公告</a> | <a href="#">招纳贤士</a> | <a href="#">联系我们</a> | 客服热线：400-675-1234<br/><br>Copyright
+            © 2006 - 2014 慕课版权所有 京ICP备09037834号 京ICP证B1034-8373号 某市公安局XX分局备案编号：123456789123</p>
+        <br><br><br>
+        <img src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                               alt="">&nbsp;&nbsp;<img
+            src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                              alt="">
+    </div>
+</div>
+
+<script type="text/javascript">
+    function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(c_name + "=");
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) c_end = document.cookie.length;
+                return decodeURIComponent(document.cookie.substring(c_start, c_end));
+                //escape() unescape()函数可对字符串进行编码解码，这样就可以在所有的计算机上读取该字符串。
+                //escape() unescape()其实只是转义特殊字符如:
+                //document.write(escape("Visit W3School!") + "<br />")
+                //document.write(escape("?!=()#%&"))
+                //输出
+                //Visit%20W3School%21
+                //%3F%21%3D%28%29%23%25%26
+                //ECMAScript v3 反对使用该方法，应用使用 decodeURI() 和 decodeURIComponent() 替代它。
+            }
+        }
+        return "";
+    }
+
+    function setCookie(c_name, value, expiredays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + expiredays);
+        document.cookie = c_name + "=" + decodeURI(value) +
+                ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString()) + ";Path=/";
+    }
+
+    function login() {
+        var username = document.forms['valiForm']['username'].value;
+        var password = document.forms['valiForm']['pwd'].value;
+        var userTips = document.getElementById('userTips');
+        var pwdTips = document.getElementById('pwdTips');
+        if (username == null || username == '') {
+            alert('用户名必须填写');
+            return false;
+        }
+        if (password == null || password == '') {
+            alert('密码必须填写');
+            return false;
+        }
+
+        if(username == getCookie('username') && password == getCookie('pwd1')){
+            setCookie('isLogin','true',365);
+            return true;
+        }else{
+            alert('用户名或密码不正确');
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

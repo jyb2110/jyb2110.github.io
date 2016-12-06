@@ -1,0 +1,134 @@
+/*产品分类页样式表*/
+
+/*Banner   start */
+.banner_containerBox{
+    width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.imgBox{
+    width: 810px;
+    height: 325px;
+    position: relative;
+    overflow: hidden;
+}
+.imgBox .imgUl{
+    width: 4050px;
+    height: 325px;
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+.imgBox li{
+    float: left;
+}
+.imgBox li img{
+    width: 810px;
+    height: 325px;
+    display: block;
+}
+.img_Number{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 15px;
+    text-align: center;
+}
+.img_Number a {
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    overflow: hidden;
+    margin: 0 5px;
+    background-color: #FFF;
+}
+.img_Number .active{
+    background-color: #ff7700;
+}
+
+/*Banner图左侧商品分类列表    start*/
+.productClass{
+    width: 183px;
+    background: #f3f3f3;
+}
+.productClass_list:last-child{
+    border-bottom: 1px solid #d7d7d7;
+}
+.productClass_tit{
+    width: 183px;
+    height: 34px;
+    border: 1px solid #d7d7d7;
+    text-align: center;
+}
+.productClass_tit h3{
+    font: 14px '宋体',serif;
+    color: #555;
+    font-weight:bold;
+    line-height: 34px;
+}
+.productClass_list{
+    width: 183px;
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    border-bottom: 1px dotted #d7d7d7;
+}
+.productClass_list dl{
+    padding: 4px 20px;
+    font: 12px '宋体',serif;
+}
+.productClass_list dt{
+    font-weight:bold;
+    line-height: 26px;
+}
+.productClass_list dd a{
+    line-height: 26px;
+    display: inline-block;
+    width: 71px;
+}
+.productClass_list dd a:hover{
+    color: orange;
+}
+/*Banner图左侧商品分类列表    end*/
+
+/*Banner图下方主列表    start*/
+.mainList{
+    margin-top: 10px;
+    margin-left: 7px;
+    width: 810px;
+    float: left;
+}
+.mainList_tit{
+    height: 34px;
+    padding-left: 5px;
+}
+.mainList_tit h3{
+    line-height: 34px;
+    font-size: 16px;
+}
+.mainList_con{
+    width: 810px;
+    height: 548px;
+}
+.mainList_con li{
+    width: 202px;
+    height: 274px;
+    float: left;
+}
+.mainList_con li.blue{
+    border-top:2px solid #096dba;
+}
+.mainList_con li.gray{
+    border-top:2px solid #cccccc;
+}
+/*.mainList_con li:first-child{
+    border-top: 2px solid #096dba;
+}*/
+.mainList_con .li_con{
+    margin: 30px 25px;
+}
+.mainList_con .li_con .price{
+    color: red;
+    font-weight: bold;
+}
+/*Banner图下方主列表    end*/
+/*Banner    end*/
