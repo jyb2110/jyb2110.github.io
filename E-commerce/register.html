@@ -22,7 +22,7 @@
 <div class="containerBox">
     <div class="regFrame">
         <form name="regVail" class="regFrame_con" action="login.html" id="regFrame_con"
-              onsubmit="return validateForm()" method="post">
+              onsubmit="return validateForm()" method="get">
             <p><span>*</span>用户名：<input class="text" type="text" placeholder="邮箱/用户名/手机号" name="username" required autofocus="autofocus"></p><span class="tips" id="tips"></span>
             <p><span>*</span>请设置密码：<input class="text" type="password" name="pwd1" maxlength="25" required onkeyup="pwdVali1()" pattern="{6,8}"></p>
             <p><span>*</span>请确认密码：<input class="text" type="password" name="pwd2" maxlength="25" required onkeyup="pwdVali1()"></p>
