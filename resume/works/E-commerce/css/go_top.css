@@ -1,0 +1,14 @@
+/*返回顶部*/
+
+.goTop_btn{
+    display: none;
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background: url("../image/icon/top_bg.png") left top no-repeat;
+}
+.goTop_btn:hover{
+    background: url("../image/icon/top_bg.png") left -40px no-repeat;
+}

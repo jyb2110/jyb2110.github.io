@@ -1,0 +1,184 @@
+/*Global*/
+html{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font: 600 26px 'Raleway', Arial, sans-serif;
+	background-color: #47c9af;
+}
+div,p,table,h1,h2,h3,h4,h5,h6,pre{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+
+
+/*Navigation*/
+
+.nav{
+	width:820px;
+	height: 300px;
+	margin: 250px auto;
+}
+.nav li{
+	display: inline-block;
+	margin: 0 22px;
+}
+.tooltip{
+	display: block;
+	padding: 5px 5px 0 5px;
+	color: rgba(0,0,0,0.4);
+	position: relative;
+	-webkit-transition: color 0.3s linear;
+	transition: color 0.3s;
+}
+.tooltip:hover{
+	color: rgba(255,255,255,1);
+}
+.tooltip .tooltip-content:after{
+	content: '';
+	position: absolute;
+	background: url("../img/tooltip1.svg") no-repeat center center;
+	-webkit-background-size:100%;
+	background-size:100%;
+	width: 30px;
+	height: 20px;
+	left: 50%;
+	top: 100%;
+	margin-left: -15px;
+	margin-top: -7px;
+	z-index: 99;
+}
+.tooltip .tooltip-content{
+	display: block;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	background-color: #fff;
+	border-radius: 50%;
+	top: -100%;
+	left: 50%;
+	margin-left: -35px;
+	margin-top: -60px;
+	text-align: center;
+	line-height:70px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.tooltip .tooltip-content i{
+	color: #47c9af;
+	font-size: 24px;
+}
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i{
+	-webkit-transform: scale3d(1,1,1) translate3d(0,0,0) rotate3d(0,0,0,0deg);
+	-moz-transform: scale3d(1,1,1) translate3d(0,0,0) rotate3d(0,0,0,0deg);
+	-ms-transform: scale3d(1,1,1) translate3d(0,0,0) rotate3d(0,0,0,0deg);
+	-o-transform: scale3d(1,1,1) translate3d(0,0,0) rotate3d(0,0,0,0deg);
+	transform: scale3d(1,1,1) translate3d(0,0,0) rotate3d(0,0,0,0deg);
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.tooltip-effect-1 .tooltip-content{
+	transform-origin: 50% 110%;
+	transform: translate3d(0,20px,0) rotate3d(1,0,1,45deg);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-1 .tooltip-content i{
+	-webkit-transform: scale3d(0.1, 0.1, 1);
+	-moz-transform: scale3d(0.1, 0.1, 1);
+	-ms-transform: scale3d(0.1, 0.1, 1);
+	-o-transform: scale3d(0.1, 0.1, 1);
+	transform: scale3d(0.1, 0.1, 1);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-2 .tooltip-content{
+	transform-origin: 50% 110%;
+	transform: translate3d(0,20px,0);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-2 .tooltip-content i{
+	transform: translate3d(0,15px,0) scale3d(0.1,0.1,1);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-3 .tooltip-content{
+	transform-origin: 50% 110%;
+	transform: translate3d(0,20px,0) rotate3d(0,1,0,90deg);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-3 .tooltip-content i{
+	transform: translate3d(0,0,0) scale3d(0.1,0.1,1);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-4 .tooltip-content{
+	transform-origin: 50% 110%;
+	transform: translate3d(0,-20px,0);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-4 .tooltip-content i{
+	transform: translate3d(0,20px,0) scale3d(0.1,0.1,1);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-5 .tooltip-content{
+	transform-origin: 50% 110%;
+	transform: translate3d(0,0,0);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.tooltip-effect-5 .tooltip-content i{
+	transform: translate3d(0,15px,0) scale3d(0.1,0.1,1);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}

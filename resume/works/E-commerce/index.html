@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电商网站demo - 慕课</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo_nav.css">
+    <link rel="stylesheet" href="css/top_bar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/go_top.css">
+    <!--<link rel="stylesheet" href="css/use_toolbar_.css">-->
+</head>
+<body>
+<!--顶部top部分-->
+<div class="top">
+    <!--top_bar    start-->
+    <div class="top_bar">
+        <div class="containerBox">
+            <div class="rightArea" id="rightArea">欢迎来到慕课网！<a href="login.html">[请登录]</a><a
+                    href="register.html">[免费注册]</a><a href="javascript:;"><span id="userN"></span></a>&nbsp;<a
+                    href="javascript:deleteCookie();" id="lgOut"></a></div>
+        </div>
+    </div>
+
+    <!--logo   start-->
+    <div class="logo">
+        <div class="containerBox">
+            <div class="left_logo fl"><a href="#"><img src="image/logo_mooc.png" alt="慕课网"></a></div>
+            <div class="search_box fl">
+                <input class="search_text" type="text" placeholder="搜索热卖">
+                <input class="search_btn fr" type="button" value="搜索">
+            </div>
+            <div class="right_logo fr">
+                <div class="shopBox">
+                    <div class="shopCar fl"><a href="shopcar.html">购物车</a></div>
+                    <div class="shopNumber fr">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航栏nav  start-->
+    <div class="navBox">
+        <div class="containerBox">
+            <div class="shopClass fl">
+                <h3>全部商品分类<i></i></h3>
+                <!--全部商品分类下的商品分类列表-->
+                <div class="shopClass_show" id="shopClass_show">
+                    <dl class="shopClass_item">
+                        <dt><a href="productClass.html">手机</a> <a href="productClass.html">数码</a> <a
+                                href="productClass.html" class="on">合约机</a></dt>
+                        <dd><a href="productClass.html">荣耀3X</a> <a href="productClass.html">单反</a> <a
+                                href="productClass.html">智能设备</a></dd>
+                    </dl>
+                    <dl class="shopClass_item">
+                        <dt><a href="#">手机</a> <a href="#">数码</a> <a href="#" class="on">合约机</a></dt>
+                        <dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
+                    </dl>
+                    <dl class="shopClass_item">
+                        <dt><a href="#">手机</a> <a href="#">数码</a> <a href="#" class="on">合约机</a></dt>
+                        <dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
+                    </dl>
+                    <dl class="shopClass_item">
+                        <dt><a href="#">手机</a> <a href="#">数码</a> <a href="#" class="on">合约机</a></dt>
+                        <dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
+                    </dl>
+                    <dl class="shopClass_item">
+                        <dt><a href="#">手机</a> <a href="#">数码</a> <a href="#" class="on">合约机</a></dt>
+                        <dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
+                    </dl>
+                </div>
+                <!--商品分类列表二级菜单列表弹出层-->
+                <div class="shopClass_list hide" id="shopClass_list">
+                    <dl class="shop_list">
+                        <dt><a href="#">电脑整机</a></dt>
+                        <dd>
+                            <a href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a>
+                        </dd>
+                    </dl>
+                    <dl class="shop_list">
+                        <dt><a href="#">电脑整机</a></dt>
+                        <dd>
+                            <a href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a>
+                        </dd>
+                    </dl>
+                    <dl class="shop_list">
+                        <dt><a href="#">电脑整机</a></dt>
+                        <dd>
+                            <a href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a>
+                        </dd>
+                    </dl>
+                    <dl class="shop_list">
+                        <dt><a href="#">电脑整机</a></dt>
+                        <dd>
+                            <a href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a>
+                        </dd>
+                    </dl>
+                    <dl class="shop_list">
+                        <dt><a href="#">电脑整机</a></dt>
+                        <dd>
+                            <a href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a><a
+                                href="#">商品商品商</a><a href="#">商商品</a><a href="#">商品商品商品</a><a href="#">商品商</a>
+                        </dd>
+                    </dl>
+                    <div class="shopClass_list_btn">
+                        <a href="#">电脑整机频道 <i></i></a><a href="#">硬件/外设频道 <i></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <!--导航菜单-->
+            <ul class="nav fl">
+                <li><a href="#">数码城</a></li>
+                <li><a href="#">天黑黑</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">发现</a></li>
+                <li><a href="#">二手特卖</a></li>
+                <li><a href="#">名品会</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--Banner部分-->
+<div class="banner_containerBox">
+    <div class="imgBox" id="imgBox">
+        <ul class="imgUl" id="imgUl">
+            <li><a href="#"><img src="image/banner/banner_01.png" alt="banner_01"></a></li>
+            <li><a href="#"><img src="image/banner/banner_02.png" alt="banner_02"></a></li>
+            <li><a href="#"><img src="image/banner/banner_03.jpg" alt="banner_03"></a></li>
+            <li><a href="#"><img src="image/banner/banner_04.jpg" alt="banner_04"></a></li>
+            <li><a href="#"><img src="image/banner/banner_05.jpg" alt="banner_05"></a></li>
+        </ul>
+        <div class="img_Number" id="img_Number">
+            <a class="active" href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a
+                href="javascript:;"></a><a href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+
+<!--主列表部分-->
+<div class="containerBox">
+    <!--主列表-->
+    <div class="mainList">
+        <!--主列表标题-->
+        <div class="mainList_tit">
+            <span class="icon"></span>
+            <h3>家用电脑</h3>
+            <span class="more"><a href="#">更多&gt;&gt;</a></span>
+        </div>
+        <!--主列表内容-->
+        <div class="mainList_con">
+            <!--主列表内容左侧广告-->
+            <div class="left_Img fl"><a href="javascript:;"><img src="image/mainlist_ad01.png" alt="ad01"/></a></div>
+            <!--主列表内容右侧商品图片-->
+            <div class="right_List fl">
+                <ul class="list_top">
+                    <li><a href="product_Intro.html"><img src="image/icon/htc_phone.png" alt="htc8"> <br/>HTC新渴望8系列
+                        <br/><span>1899元</span></a></li>
+                    <li><a href="product_Intro.html"><img src="image/icon/htc_phone.png" alt="htc8"> <br/>HTC新渴望8系列
+                        <br/><span>1899元</span></a></li>
+                    <li><a href="product_Intro.html"><img src="image/icon/htc_phone.png" alt="htc8"> <br/>HTC新渴望8系列
+                        <br/><span>1899元</span></a></li>
+                    <li><a href="product_Intro.html"><img src="image/icon/htc_phone.png" alt="htc8"> <br/>HTC新渴望8系列
+                        <br/><span>1899元</span></a></li>
+                </ul>
+                <ul class="list_bottom">
+                    <li><a href="product_Intro.html"><img src="image/icon/ipad.png" alt="ipad">全网低价 Apple<br>苹果iPad
+                        mini1 <br><span>￥1888.00</span></a></li>
+                    <li><a href="product_Intro.html"><img src="image/icon/ipad.png" alt="ipad">全网低价 Apple<br>苹果iPad
+                        mini1 <br><span>￥1888.00</span></a></li>
+                    <li><a href="product_Intro.html"><img src="image/icon/ipad.png" alt="ipad">全网低价 Apple<br>苹果iPad
+                        mini1 <br> <span>￥1888.00</span></a></li>
+                    <li><a href="product_Intro.html"><img src="image/icon/ipad.png" alt="ipad">全网低价 Apple<br>苹果iPad
+                        mini1 <br><span>￥1888.00</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mainList">
+        <!--主列表标题-->
+        <div class="mainList_tit">
+            <span class="icon"></span>
+            <h3>食用酒水</h3>
+            <span class="more"><a href="#">更多&gt;&gt;</a></span>
+        </div>
+        <!--主列表内容-->
+        <div class="mainList_con">
+            <!--主列表内容左侧广告-->
+            <div class="left_Img fl"><a href="javascript:;"><img src="image/mainlist_ad02.png" alt="ad01"></a></div>
+            <!--主列表内容右侧商品图片-->
+            <div class="right_List fl">
+                <ul class="list_top">
+                    <li><a href="#"><img src="image/icon/cookie.png" alt="htc8"> <br/>三月美食狂享购 <br/><span>50元</span></a>
+                    </li>
+                    <li><a href="#"><img src="image/icon/cookie.png" alt="htc8"> <br/>三月美食狂享购 <br/><span>50元</span></a>
+                    </li>
+                    <li><a href="#"><img src="image/icon/cookie.png" alt="htc8"> <br/>三月美食狂享购 <br/><span>50元</span></a>
+                    </li>
+                    <li><a href="#"><img src="image/icon/cookie.png" alt="htc8"> <br/>三月美食狂享购 <br/><span>50元</span></a>
+                    </li>
+                </ul>
+                <ul class="list_bottom">
+                    <li><a href="#"><img src="image/icon/kangbite.png" alt="ipad">康比特 维他保咀
+                        <br>嚼片 60片 <br><span>￥600.00</span></a></li>
+                    <li><a href="#"><img src="image/icon/kangbite.png" alt="ipad">康比特 维他保咀
+                        <br>嚼片 60片 <br><span>￥600.00</span></a></li>
+                    <li><a href="#"><img src="image/icon/kangbite.png" alt="ipad">康比特 维他保咀
+                        <br>嚼片 60片 <br> <span>￥600.00</span></a></li>
+                    <li><a href="#"><img src="image/icon/kangbite.png" alt="ipad">康比特 维他保咀
+                        <br>嚼片 60片 <br><span>￥600.00</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部foot部分-->
+<div class="foot">
+    <div class="containerBox">
+        <br><br><br><br>
+        <p><a href="#">慕课简介</a> | <a href="#">慕课公告</a> | <a href="#">招纳贤士</a> | <a href="#">联系我们</a> | 客服热线：400-675-1234<br/><br>Copyright
+            © 2006 - 2014 慕课版权所有 京ICP备09037834号 京ICP证B1034-8373号 某市公安局XX分局备案编号：123456789123</p>
+        <br><br><br>
+        <img src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                               alt="">&nbsp;&nbsp;<img
+            src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                              alt="">
+    </div>
+</div>
+
+<!--返回顶部按钮-->
+<a href="javascript:;" id="goTop_btn" class="goTop_btn"></a>
+
+<!--侧栏工具条-->
+<!--<div class="toolbar">
+    <a href="javascript:;" class="toolbar-item toolbar-item-weixin">
+        <span class="toolbar-layer"></span>
+    </a>
+    <a href="javascript:;" class="toolbar-item toolbar-item-feedback"></a>
+    <a href="javascript:;" class="toolbar-item toolbar-item-app">
+        <span class="toolbar-layer"></span>
+    </a>
+    <a href="javascript:;" class="toolbar-item toolbar-item-top"></a>
+</div>-->
+
+<!--<script type="text/javascript" src="js/startMove.js"></script>-->
+<script src="js/gather.js"></script>
+<script type="text/javascript" src="js/getCookie.js"></script>
+<script type="text/javascript">
+    banner();
+    showList();
+</script>
+</body>
+</html>

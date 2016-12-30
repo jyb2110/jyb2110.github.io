@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/reg_style.css">
+</head>
+<body>
+<!--顶部top部分-->
+<div class="top">
+    <div class="containerBox">
+        <div class="top_bar">
+            <a href="index.html"><img src="image/logo_mooc.png" alt="慕课网"></a>
+            <h3>欢迎注册</h3>
+        </div>
+    </div>
+</div>
+
+<!--登陆框主体-->
+<div class="containerBox">
+    <div class="regFrame">
+        <form name="regVail" class="regFrame_con" action="login.html" id="regFrame_con"
+              onsubmit="return validateForm()" method="post">
+            <p><span>*</span>用户名：<input class="text" type="text" placeholder="邮箱/用户名/手机号" name="username" required autofocus="autofocus"></p><span class="tips" id="tips"></span>
+            <p><span>*</span>请设置密码：<input class="text" type="password" name="pwd1" maxlength="25" required onkeyup="pwdVali1()" pattern="{6,8}"></p>
+            <p><span>*</span>请确认密码：<input class="text" type="password" name="pwd2" maxlength="25" required onkeyup="pwdVali1()"></p>
+            <p><span>*</span>邮箱：<input class="text" type="email" name="email" required></p>
+            <p><span>*</span>地址：<input class="text" type="text" name="address" required></p><br>
+            <input type="checkbox" id="agree" class="agree"><label for="agree" class="agreement">我已阅读并同意<a
+                href="#">《用户注册协议》</a></label><br><br><br>
+            <input class="submit" type="submit" value="提交" onclick="checkCookie()">
+        </form>
+    </div>
+</div>
+
+<!--底部foot部分-->
+<div class="foot">
+    <div class="containerBox">
+        <br><br><br><br>
+        <p><a href="#">慕课简介</a> | <a href="#">慕课公告</a> | <a href="#">招纳贤士</a> | <a href="#">联系我们</a> | 客服热线：400-675-1234<br/><br>Copyright
+            © 2006 - 2014 慕课版权所有 京ICP备09037834号 京ICP证B1034-8373号 某市公安局XX分局备案编号：123456789123</p>
+        <br><br><br>
+        <img src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                               alt="">&nbsp;&nbsp;<img
+            src="image/icon/foot_trusted_website.png" alt="">&nbsp;&nbsp;<img src="image/icon/foot_trusted_website.png"
+                                                                              alt="">
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var agree = document.getElementById('agree');
+        agree.checked = true;
+    };
+    //点击提交后验证输入框是否为空
+    function validateForm() {
+        var userN = document.forms["regVail"]["username"].value;
+        var pwd1 = document.forms["regVail"]["pwd1"].value;
+        var pwd2 = document.forms["regVail"]["pwd2"].value;
+        var email = document.forms["regVail"]["email"].value;
+        var address = document.forms["regVail"]["address"].value;
+        var agree = document.getElementById('agree');
+        var tips = document.getElementById('tips');
+        if (userN == null || userN == "") {
+            alert("用户名必须填写");
+            return false;
+        }
+        if (pwd1 == null || pwd1 == "") {
+            alert("密码必须填写");
+            return false;
+        }
+        if (pwd2 == null || pwd2 == "") {
+            alert("确认密码必须填写");
+            return false;
+        }
+        if (email == null || email == "") {
+            alert("邮箱地址必须填写");
+            return false;
+        }
+        if (pwd1 != pwd2) {
+            alert('两次输入的密码不一致!');
+            return false;
+        }
+        var x = document.forms["regVail"]["email"].value;
+        var atpos = x.indexOf("@");
+        var dotpos = x.lastIndexOf(".");
+        if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+            alert("不是一个有效的 e-mail 地址");
+            return false;
+        }
+        if (address == null || address == "") {
+            alert("地址必须填写");
+            return false;
+        }
+        if (agree.checked == false) {
+            alert('请同意用户注册协议!');
+            return false;
+        }
+        alert('注册成功！');
+    }
+
+    //输入完成后触发onblur(失去焦点事件，意味着用户已经将该项输入完成)事件调用该函数，发送已输入数据到后台匹配并返回是否符合输入要求的提示
+    function ajaxVali() {
+
+    }
+    //验证两次输入的密码是否一致
+    function pwdVali1() {
+        var tips = document.getElementById('tips');
+        var pwd1 = document.forms["regVail"]["pwd1"].value;
+        var pwd2 = document.forms["regVail"]["pwd2"].value;
+        if (pwd2 == null || pwd2 == '' || pwd1 == null || pwd1 == '') {
+            tips.innerHTML = '';
+            return true;
+        } else {
+            if (pwd1 != pwd2) {
+                tips.innerHTML = '两次输入的密码不一致!';
+                return false;
+            } else {
+                tips.innerHTML = '';
+                return true;
+            }
+        }
+
+        //限制输入字符数 6-50
+    }
+
+
+    function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(c_name + "=");
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) c_end = document.cookie.length;
+                return decodeURIComponent(document.cookie.substring(c_start, c_end));
+                //escape() unescape()函数可对字符串进行编码解码，这样就可以在所有的计算机上读取该字符串。
+                //escape() unescape()其实只是转义特殊字符如:
+                //document.write(escape("Visit W3School!") + "<br />")
+                //document.write(escape("?!=()#%&"))
+                //输出
+                //Visit%20W3School%21
+                //%3F%21%3D%28%29%23%25%26
+                //ECMAScript v3 反对使用该方法，应用使用 decodeURI() 和 decodeURIComponent() 替代它。
+            }
+        }
+        return "";
+    }
+
+    function setCookie(c_name, value, expiredays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + expiredays);
+        document.cookie = c_name + "=" + decodeURI(value) +
+                ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString()) + ";Path=/";
+    }
+
+    function reg() {
+        username = document.forms['regVail']['username'].value;
+        password = document.forms['regVail']['pwd1'].value;
+        setCookie('username', username, 365);
+        setCookie('pwd1',password,365);
+    }
+
+    function checkCookie(){
+        username = document.forms['regVail']['username'].value;
+        if(username == getCookie('username')){
+            alert('用户名已注册');
+        }else{
+            reg();
+        }
+    }
+</script>
+</body>
+</html>

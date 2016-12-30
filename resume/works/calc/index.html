@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc</title>
+    <link rel="stylesheet" href="css/calc.css">
+</head>
+<body>
+<div class="container" id="calc">
+    <div class="display">
+        <input type="text" maxlength="9" readonly value="0" class="input-cur" id="input-cur">
+        <input type="text" readonly value='' class="formula" id="formula">
+    </div>
+    <div class="btn">
+        <ul>
+            <li class="btn-1"><a href="javascript:;">+</a></li>
+            <li class="btn-1"><a href="javascript:;">-</a></li>
+            <li class="btn-1"><a href="javascript:;">*</a></li>
+            <li class="btn-1"><a href="javascript:;">/</a></li>
+            <li><a href="javascript:;">7</a></li>
+            <li><a href="javascript:;">8</a></li>
+            <li><a href="javascript:;">9</a></li>
+            <li class="btn-1"><a href="javascript:;">←</a></li>
+            <li><a href="javascript:;">4</a></li>
+            <li><a href="javascript:;">5</a></li>
+            <li><a href="javascript:;">6</a></li>
+            <li class="btn-0"><a href="javascript:;">C</a></li>
+            <li><a href="javascript:;">1</a></li>
+            <li><a href="javascript:;">2</a></li>
+            <li><a href="javascript:;">3</a></li>
+            <li class="btn-2"><a href="javascript:;">=</a></li>
+            <li class="btn-3"><a href="javascript:;">0</a></li>
+            <li><a href="javascript:;">.</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--<script type="text/javascript">
+    //获取到所有的按钮及input输入框
+    var oCalc = document.getElementById('calc');
+    var display = document.getElementById('input-cur'); //显示屏  输入及显示结果
+    var formula = document.getElementById('formula'); //计算公式 操作显示
+    var aBtn = oCalc.getElementsByTagName('a');  //所有的按钮
+
+    var dr = 0;  //当前输入的数字，初始化为0
+    var fv = null;  //点击+-*/等操作后存储的值
+    var replace = true;  //下次输入是否替换dr的值
+    var isResult = false;   //当前dr是用户输入的值还是运算后的结果值
+
+    window.onload = function () {
+        if(isResult){
+            replace = true;
+        }else {
+            replace = false;
+        }
+        if(replace){
+            dr = display.value = this.innerHTML;
+            replace = false;
+        }else{
+            dr = display.value += this.innerHTML;
+        }
+
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].onclick = function () {
+                if (this.innerHTML === 'C') {
+                    dr = display.value = 0;
+                    formula.value = '';
+                    replace = true;
+                    isResult = false;
+                } else if (this.innerHTML === '←') {
+                    backSpace();
+                } else if (this.innerHTML === '+') {
+                    count('+');
+                } else if (this.innerHTML === '-') {
+                    count('-');
+                } else if (this.innerHTML === '*') {
+                    count('*');
+                } else if (this.innerHTML === '/') {
+                    count('/');
+                }else if (this.innerHTML === '.') {
+                    if(display.value.length >= 10 || dr === '除数不能为0'){
+                        return;
+                    }
+                    if(/\./.test(display.value)){
+                        return;
+                    }
+                    dr = display.value += this.innerHTML;
+                } else if (this.innerHTML === '=') {
+                    result();
+                } else {
+                    if(display.value.length >= 10){
+                        return;
+                    }
+                    if(isResult){
+                        dr = display.value = this.innerHTML;
+                        formula.value = '';
+                        replace = true;
+                        isResult = false;
+                    }
+                    if(replace){
+                        dr = display.value = this.innerHTML;
+                        replace = false;
+                        isResult = false;
+                    }else{
+                        dr = display.value += this.innerHTML;
+                        isResult = false;
+                    }
+                }
+            }
+        }
+    };
+
+    //点击 +-*/ 后调用
+    function count(operation) {
+        if(dr === '除数不能为0'){
+            return;
+        }
+        if(/\.$/.test(display.value)){
+            return;
+        }
+        if(isResult){
+            fv = formula.value = dr + operation;
+            isResult = false;
+        }else{
+            fv = formula.value += dr + operation;
+        }
+        replace = true;
+    }
+
+    //点击 = 后调用
+    function result() {
+        if (formula.value === '') {
+            return;
+        }
+        count('');
+        dr = display.value = eval(formula.value);
+        if(dr == 'Infinity'){
+            dr = display.value = '除数不能为0';
+        }
+        isResult = true;
+    }
+
+    //退格
+    function backSpace() {
+        if(isResult){
+            return;
+        }
+        if(dr.toString().length <= 1){
+            dr = display.value = 0;
+            replace = true;
+            isResult = false;
+            return;
+        }
+        dr = display.value = dr.toString().substring(0,dr.toString().length-1);
+        console.log(dr.toString());
+    }
+</script>-->
+<script type="text/javascript">
+    window.onload = function () {
+        var oCalc = document.getElementById('calc');
+        var display = document.getElementById('input-cur');  //显示器  显示当前输入的值
+        var oFormula = document.getElementById('formula');   //已输入的值
+        var aBtn = oCalc.getElementsByTagName('a');         //所有的按钮
+
+        var replace = true;  //下一次输入/\w\./是否需要清空当前显示的值
+        var isResult = false;  //当前显示的值是否是运算结果
+        var v1 = 0;   //第一次输入的值
+        var v2 = null;  //第二次输入的值
+
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].onclick = function () {
+                switch (this.innerHTML) {
+                    case '+':
+                        count(this.innerHTML);
+                        break;
+                    case '-':
+                        count(this.innerHTML);
+                        break;
+                    case '*':
+                        count(this.innerHTML);
+                        break;
+                    case '/':
+                        count(this.innerHTML);
+                        break;
+                    case '←':
+                        backSpace();
+                        break;
+                    case 'C':
+                        clear();
+                        break;
+                    case '=':
+                        result();
+                        break;
+                    case '.':
+                        if(/\./.test(display.value)){
+                            if(replace){
+                                display.value = '0' + this.innerHTML;
+                                replace = false;
+                            }
+                            return;
+                        }else {
+                            if(isResult){
+                                isResult = false;
+                            }
+                            if(replace){
+                                display.value = '0' + this.innerHTML;
+                                replace = false;
+                            }else {
+                                display.value += this.innerHTML;
+                            }
+                        }
+                        break;
+                    default:
+                        if(isResult){
+                            oFormula.value = '';
+                            isResult = false;
+                        }
+                        if(replace){
+                            display.value = this.innerHTML;
+                            replace = false;
+                        }else {
+                            if(display.value.length >= 10){
+                                return;
+                            }
+                            display.value += this.innerHTML;
+                        }
+                }
+            }
+        }
+
+        //  \+ \- \* \/
+        //具有连续运算功能
+        function count(operation) {
+            if(isResult){
+                oFormula.value = display.value + operation;
+                v1 = Number(display.value);
+                isResult = false;
+                replace = true;
+                return;
+            }
+
+            if(/[\+\-\*\/]/.test(oFormula.value)){
+                result();
+                v1 = Number(display.value);
+                oFormula.value += operation;
+                replace = true;
+                isResult = false;
+                return;
+            }
+
+            v1 = Number(display.value);
+            oFormula.value = v1 + operation;
+
+            replace = true;
+            isResult = false;
+        }
+
+        //退格
+        function backSpace() {
+            if(display.value <= 0 || isResult){
+                return;
+            }
+            if(display.value.length === 1){
+                display.value = 0;
+                replace = true;
+            }else{
+                display.value = display.value.substring(0,display.value.length-1);
+                replace = false;
+            }
+            isResult = false;
+        }
+
+        //清空 归零
+        function clear() {
+            display.value = 0;
+            oFormula.value = '';
+            replace = true;
+            isResult = false;
+        }
+
+        //计算结果
+        function result() {
+            if(oFormula.value === ''){
+                return;
+            }
+            v2 = Number(display.value);
+
+            if(/\+$/.test(oFormula.value)){
+                display.value = v1 + v2;
+            }else if(/\-$/.test(oFormula.value)){
+                display.value = v1 - v2;
+            }else if(/\*$/.test(oFormula.value)){
+                display.value = v1 * v2;
+            }else if(/\/$/.test(oFormula.value)){
+                display.value = v1 / v2;
+            }
+
+            oFormula.value += v2;
+
+            replace = true;
+            isResult = true;
+        }
+    };
+</script>
+</body>
+</html>

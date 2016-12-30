@@ -1,0 +1,21 @@
+/*top_bar顶部条公用样式*/
+/*top_bar  start*/
+.top_bar{
+    width: 100%;
+    height: 31px;
+    background: #f7f7f7;
+    font:12px/31px "宋体",serif;
+}
+.top_bar a:hover{
+    color:#FF0000;
+    text-decoration: none;
+}
+.leftArea{
+    float:left;
+    padding: 0 17px;
+    font-weight: bold;
+}
+.rightArea{
+    float:right;
+}
+/*top_bar  end*/

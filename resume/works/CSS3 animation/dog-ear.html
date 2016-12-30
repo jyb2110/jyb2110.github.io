@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纸张折角效果</title>
+    <style type="text/css">
+        body {
+            background-color: #eaf0f2;
+        }
+
+        .wrap {
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .share-layer, .image-layer {
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .share-layer {
+            background-color: #fff;
+        }
+
+        .image-layer {
+            cursor: pointer;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #a2a2a2;
+        }
+
+        .close-btn:hover {
+            color: #000;
+            background-color: rgba(59, 89, 152, 0.3);
+        }
+
+        .image-layer:before {
+            content: '';
+            border: 0 solid;
+            border-color: rgba(0, 0, 0, 0.2) #fff;
+            -webkit-box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 0 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        .image-layer:hover:before {
+            border-right-width: 80px;
+            border-bottom-width: 80px;
+        }
+
+        .wrap.folded .image-layer:before {
+            border-right-width: 1000px;
+            border-bottom-width: 600px;
+        }
+
+        .wrap.folded .share-layer {
+            z-index: 11;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+    <div class="share-layer">
+        <span class="close-btn">×</span>
+    </div>
+
+    <div class="image-layer">
+        <img src="http://p6.qhimg.com/d/inn/3f563406/table.jpg" alt="img" width="500">
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById('wrap').addEventListener("click",function(e){
+            if(e.target.className == "close-btn"){
+                this.className = "wrap";
+            } else {
+                this.className = "wrap folded";
+            }
+        });
+    };
+</script>
+</body>
+</html>

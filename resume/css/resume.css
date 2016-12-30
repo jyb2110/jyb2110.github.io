@@ -1,0 +1,173 @@
+/*Global*/
+body{
+    font-family: Lato,"Microsoft YaHei",sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFF;
+    cursor: default;
+}
+a:link,.large,.notice{
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+a:link,a:hover,a:visited{
+    text-decoration: none;
+    color: #FFF;
+}
+
+/*page1*/
+/*photo*/
+.light{
+    width: 150px;
+    height: 150px;
+    border:0 solid #00F3E4;
+    margin: 0 auto;
+}
+.photo {
+    width: 150px;
+    height: 150px;
+    background: url("../img/me.jpg") no-repeat center;
+    -webkit-background-size:cover;
+    background-size:cover;
+    box-shadow: 0 0 35px 10px #00F3E4;
+}
+.light,.photo{
+    border-radius: 50%;
+}
+.describe{
+    text-align: center;
+}
+.heading{
+    text-align: center;
+    font-size: 3.5em;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 1px 2px #1bbc9b,2px 4px #aee2d9;
+}
+.describe .title{
+    font-size: 2.5em;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 1px 2px #1bbc9b,2px 4px #aee2d9;
+}
+.describe .notice{
+    color: rgba(0,0,0,0.6);
+}
+.describe .large{
+    font-size: 1.5em;
+}
+.describe .notice:hover{
+    color: #9f3;
+}
+/*page2*/
+/*works*/
+.works{
+    text-align: center;
+}
+/*.works .title:hover{
+    color: #9f3;
+}*/
+.works .col-xs-4{
+    margin-top:15px;
+}
+.works .thumbnail{
+    width: 180px;
+    height: 236px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 4px grey;
+}
+.works .thumbnail1{
+    background: url("../img/360-logo.png") no-repeat center;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.works .thumbnail2{
+    background: url("../img/calc.png") no-repeat center;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.works .thumbnail3{
+    background: url("../img/drawing board.png") no-repeat center;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.works .thumbnail4{
+    background: url("../img/photo wall.png") no-repeat center;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.works .thumbnail5{
+    background: url("../img/E-commerce.png") no-repeat center;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.works .thumbnail6{
+    background: url("../img/CSS3 animation.png") no-repeat center;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.works .thumbnail .mask{
+    display: block;
+    width: 182px;
+    height: 238px;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    line-height: 236px;
+}
+.works .thumbnail:hover .mask{
+    opacity: 1;
+}
+
+
+/*page3*/
+/*skill*/
+.skill{
+    text-align: center;
+}
+.skill .heading{
+    text-shadow: 1px 2px #7baabe,2px 4px #aee2d9;
+}
+.skill span{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+.skill span:nth-of-type(2),.skill span:nth-of-type(5),.skill span:nth-of-type(8){
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.skill span:nth-of-type(3),.skill span:nth-of-type(6){
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/*page4*/
+/*contact*/
+.contact{
+    text-align: center;
+}
+.contact .heading{
+    text-shadow: 1px 2px #ff9900,2px 4px #aee2d9;
+}
+.contact .large{
+    font-size: 1.4em;
+}
+.contact .notice{
+    color: rgba(0,0,0,0.5);
+ }
+.contact .email{
+    color: rgba(255,255,255,0.6);
+}

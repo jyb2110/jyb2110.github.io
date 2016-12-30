@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>resume</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <style>
+        /*.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}*/
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div id="dowebok">
+    <div class="section active">
+        <!--
+                <h3>第一屏</h3>
+                <p>fullPage.js — 项目导航演示</p>
+        -->
+        <!--首页 基本信息-->
+        <div class="light">
+            <div class="photo"></div>
+        </div>
+        <div class="describe">
+            <p>&nbsp;</p>
+            <p class="heading">江宇彬</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <p class="title">基本信息</p>
+                        <p>年龄：22岁</p>
+                        <p>民族：汉族</p>
+                        <p>生日：1994.08.17</p>
+                        <p>学历：大专</p>
+                        <p><span class="notice">自我描述</span>：有着沉稳、开朗、乐观的性格，与人交往时热情、活跃，富有团队意识与合作精神。自学能力与适应能力强，对技术有追求，热衷于实干。梦想成为一名极具创意的程序猿。</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p class="title">教育背景</p>
+                        <p>广州科技贸易职业学院</p>
+                        <p class="notice">信息工程学院</p>
+                        <p class="notice">计算机应用技术专业</p>
+                        <p>2014.09-2017.07</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p class="title">期望工作</p>
+                        <p class="notice large">web前端开发实习生</p>
+                        <p>Email:690071506@qq.com</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="section">
+        <!--
+                <h3>第二屏</h3>
+                <p>请查看右边的圆圈</p>
+        -->
+        <!--作品展示-->
+        <div class="container works">
+            <div class="container">
+                <p class="heading">作品展示</p>
+                <div class="col-xs-4">
+                    <a href="works/国产浏览器汇合/index.html" target="_blank">
+                        <div class="thumbnail thumbnail1">
+                            <span class="mask">现代浏览器博物馆</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="works/calc/index.html" target="_blank">
+                        <div class="thumbnail thumbnail2">
+                            <span class="mask">简易计算器</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="works/Drawing%20board/Write.html" target="_blank">
+                        <div class="thumbnail thumbnail3">
+                            <span class="mask">canvas画板</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="works/CSS3照片墙/photo_wall.html" target="_blank">
+                        <div class="thumbnail thumbnail4">
+                            <span class="mask">CSS3照片墙</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="works/E-commerce/index.html" target="_blank">
+                        <div class="thumbnail thumbnail5">
+                            <span class="mask">仿电商网站</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="works/CSS3%20animation/3D%20box.html" target="_blank">
+                        <div class="thumbnail thumbnail6">
+                            <span class="mask">CSS3动画练习</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <!--
+                <h3>第三屏</h3>
+                <p>圆圈还可以设置位置，颜色，加上 tip，点击可以控制</p>
+        -->
+        <!--技能掌握-->
+        <div class="skill">
+            <p class="heading">技能掌握</p>
+            <span>HTML/HTML5</span>
+            <span>CSS3</span>
+            <span>Sass</span><br/>
+            <span>Bootstrap</span>
+            <span>Javascript</span>
+            <span>JQuery</span><br/>
+            <span>版本控制工具Git</span>
+            <span>Photoshop</span>
+        </div>
+    </div>
+    <div class="section">
+        <!--
+                <h3>第四屏</h3>
+                <p>这是最后一屏</p>
+        -->
+        <!--联系我吧-->
+        <div class="contact">
+            <p class="heading">联系我吧</p>
+            <p class="large notice"><span class="email">Email:</span>690071506@qq.com</p>
+            <p class="large">等待着组织的怀抱...</p>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+    $(function () {
+        $('#dowebok').fullpage({
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+            navigation: true,
+            navigationTooltips: ['个人简介', '作品展示', '技能掌握', '联系方式'],
+            resize: false,
+            scrollingSpeed: 400
+        });
+    });
+</script>
+</body>
+</html>

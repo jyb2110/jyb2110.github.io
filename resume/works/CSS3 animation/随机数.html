@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机数</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "microsoft yahei",serif;
+            font-size: 22px;
+        }
+        input{
+            border: 2px dashed #afd9ee;
+            font-family: "microsoft yahei",serif;
+        }
+        input.login{
+            background-color: transparent;
+            color: #0e0e0e;
+            border: 2px solid #afd9ee;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload = function () {
+        var oRandom = document.getElementById("suiji");
+        var oSpan = oRandom.getElementsByTagName("span")[0];
+        var oBtn1 = document.getElementById("start");
+        var oBtn2 = document.getElementById("stop");
+        var t = null;
+        oBtn1.onclick = function () {
+            clearInterval(t);
+            t = setInterval(function () {
+                oSpan.innerHTML = Math.round(Math.random()*10);
+            },50);
+        };
+        oBtn2.onclick = function () {
+            clearInterval(t);
+            if(parseInt(oSpan.innerHTML) == 5){
+                alert("恭喜中奖");
+            }else{
+                alert("谢谢参与");
+            }
+        };
+    };
+</script>
+
+<button type="button" id="start">开始抽奖</button>
+<button type="button" id="stop">停</button>
+<p id="suiji">您抽中的数字是 &nbsp;: <span></span></p> <br>
+</body>
+</html>

@@ -1,0 +1,65 @@
+@mixin toolbar-item-position($pos,$hoverPos){
+  background-position: 0 $pos;
+  &:hover{
+    background-position: 0 $hoverPos;
+  }
+}
+
+.toolbar-item,.toolbar-layer{
+  background-image: url(../img/toolbar.png);
+  background-repeat:no-repeat;
+}
+$toolbar-size: 52px;
+.toolbar {
+  position: fixed;
+  right: 10px;
+  margin-left: -$toolbar-size / 2;
+  bottom: 10px;
+}
+.toolbar-item {
+  display: block;
+  width: $toolbar-size;
+  height: $toolbar-size;
+  position: relative;
+  margin-top: 1px;
+  @include transition(background-position 0.4s);
+
+  &:hover{
+    .toolbar-layer{
+      opacity: 1;
+      filter: alpha(opacity=100);
+      @include scale(1);
+    }
+  }
+}
+.toolbar-item-weixin {
+  @include toolbar-item-position(-798px,-860px);
+  .toolbar-layer{
+    height: 212px;
+    background-position: 0 0;
+  }
+}
+.toolbar-item-feedback {
+  @include toolbar-item-position(-426px,-488px);
+}
+.toolbar-item-app {
+  @include toolbar-item-position(-550px,-612px);
+  .toolbar-layer{
+    height: 194px;
+    background-position: 0 -226px;
+  }
+}
+.toolbar-item-top {
+  @include toolbar-item-position(-674px,-736px);
+}
+.toolbar-layer {
+  position: absolute;
+  right:$toolbar-size - 5;
+  bottom:-10px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 172px;
+  @include scale(0.01);
+  @include transform-origin(95% 95%);
+  @include transition(all 0.4s);
+}

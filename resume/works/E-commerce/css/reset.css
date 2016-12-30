@@ -1,0 +1,38 @@
+/*样式重置*/
+body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,table,tr,td,th,p,dt,dd,dl{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-size:12px;
+}
+li{
+    list-style-type: none;
+}
+textarea{
+    resize:none;
+}
+/*公用样式*/
+a{
+    text-decoration: none;
+    color: #555;
+}
+.containerBox{
+    width:1000px;
+    margin: 0 auto;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+img{
+    display: inline-block;
+}

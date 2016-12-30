@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box 3D</title>
+    <style type="text/css">
+        body,html{
+            height: 100%;
+        }
+        .wrap{
+            width: 500px;
+            height: 500px;
+            border:1px solid #ddd;
+            position: relative;
+            left: calc(50% - 250px);
+            top: calc(50% - 250px);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            perspective-origin: left top;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: all 1.2s linear;
+            -moz-transition: all 1.2s linear;
+            -ms-transition: all 1.2s linear;
+            -o-transition: all 1.2s linear;
+            transition: all 1.2s linear;
+            transform-origin: 50% 50% -50px;
+        }
+        .box div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box div:nth-of-type(1){
+            background-color: lavender;
+            left: -100px;
+            -webkit-transform-origin: right;
+            transform-origin: right;
+            -webkit-transform: rotateY(-90deg);
+            -moz-transform: rotateY(-90deg);
+            -ms-transform: rotateY(-90deg);
+            -o-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+        }
+        .box div:nth-of-type(2){
+            background-color: lavenderblush;
+            top: -100px;
+            -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+            -webkit-transform: rotateX(90deg);
+            -moz-transform: rotateX(90deg);
+            -ms-transform: rotateX(90deg);
+            -o-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+        }
+        .box div:nth-of-type(3){
+            background-color: lightblue;
+            right: -100px;
+            -webkit-transform-origin: left;
+            transform-origin: left;
+            -webkit-transform: rotateY(90deg);
+            -moz-transform: rotateY(90deg);
+            -ms-transform: rotateY(90deg);
+            -o-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+        }
+        .box div:nth-of-type(4){
+            background-color: dimgrey;
+            bottom: -100px;
+            -webkit-transform-origin: top;
+            transform-origin: top;
+            -webkit-transform: rotateX(-90deg);
+            -moz-transform: rotateX(-90deg);
+            -ms-transform: rotateX(-90deg);
+            -o-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+        }
+        .box div:nth-of-type(5){
+            background-color: lawngreen;
+            -webkit-transform: translateZ(-100px);
+            -moz-transform: translateZ(-100px);
+            -ms-transform: translateZ(-100px);
+            -o-transform: translateZ(-100px);
+            transform: translateZ(-100px) rotateX(180deg);
+        }
+        .box div:nth-of-type(6){
+            background-color: saddlebrown;
+        }
+        .box:hover{
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+    </div>
+    <p><a href="dog-ear.html" target="_blank">书页折角效果</a></p>
+    <p><a href="loading.html" target="_blank">页面加载loading动画</a></p>
+    <p><a href="CSS3%20tooltip/index.html" target="_blank">tooltip</a></p>
+    <p><a href="rotate%20photo%20frame.html" target="_blank">相框动画</a></p>
+</div>
+</body>
+</html>

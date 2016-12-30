@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>国产浏览器汇合</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+        body{
+            padding-top: 50px;
+            padding-bottom: 40px;
+        }
+        /*轮播广告*/
+        .carousel{
+            height: 400px;
+            margin-bottom: 60px;
+        }
+        .carousel .item{
+            height: 400px;
+        }
+
+        /*标签页内容  tab-content*/
+        .tab-content .col-sm-7 h1 small{
+            font-size: 28px;
+        }
+        .tab-content .col-sm-7 h1{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 50px;
+            color: #2a6496;
+        }
+        .tab-content .col-sm-7 p{
+            font-size: 21px;
+            color: #5a5a5a;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        .tab-content .col-sm-5 img{
+            max-width: 100%;
+        }
+        .feature{
+            padding: 30px 0;
+        }
+
+        /*响应式布局 媒体查询  @media*/
+        @media screen and (max-width:900px){
+            .carousel{
+                height: 300px;
+            }
+            .carousel .item {
+                height: 300px;
+            }
+            .carousel .item img{
+                min-height: 300px;
+            }
+            .carousel .carousel-caption{
+                font-size: 18px;
+                line-height: 1.4;
+            }
+            .carousel .carousel-caption h1{
+                font-size: 34px;
+            }
+        }
+        @media screen and (max-width:768px){
+            .carousel{
+                height: 200px;
+            }
+            .carousel .item {
+                height: 200px;
+            }
+            .carousel .item img{
+                min-height: 200px;
+            }
+            .carousel .carousel-caption{
+                font-size: 14px;
+                line-height: 1.0;
+            }
+            .carousel .carousel-caption h1{
+                font-size: 28px;
+                margin-bottom: 5px;
+                margin-top: 10px;
+            }
+        }
+        @media (min-width: 992px) {
+            .tab-content .col-sm-7 h1 {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!--导航条-->
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">国产浏览器汇合</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu-nav">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">综述</a></li>
+                <li><a href="#sketch">简述</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">特点<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-sogou">搜狗高速浏览器</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-360">360安全浏览器</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-QQ">QQ浏览器</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-liebao">猎豹浏览器</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+
+<!--轮播广告-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="img/sogou-banner.png" alt="...">
+            <div class="carousel-caption">
+                <h1>搜狗高速浏览器</h1>
+
+                <p>搜狗浏览器由搜狗公司开发，基于谷歌chromium内核，力求为用户提供跨终端无缝的使用体验，让上网更简单、网页阅读更流畅。</p>
+
+                <p><a class="btn btn-lg btn-primary" href="http://ie.sogou.com/" role="button" target="_blank">点我下载</a></p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/360-banner.png" alt="...">
+            <div class="carousel-caption">
+                <h1>360安全浏览器</h1>
+
+                <p>360安全浏览器(360 Security Browser)是360安全中心推出的一款基于IE和Chrome双内核的浏览器。</p>
+
+                <p><a class="btn btn-lg btn-primary" href="http://se.360.cn/" role="button" target="_blank">点我下载</a></p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/QQ-banner.png" alt="...">
+            <div class="carousel-caption">
+                <h1>QQ浏览器</h1>
+
+                <p>QQ浏览器9.0版发布，Chrome Tab 高速组件+自带IE高级内核，浏览快速稳定，拒绝卡顿，完美支持HTML5和各种新的Web标准。</p>
+
+                <p><a class="btn btn-lg btn-primary" href="http://browser.qq.com/" role="button" target="_blank">点我下载</a></p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/liebao-banner.png" alt="...">
+            <div class="carousel-caption">
+                <h1>猎豹安全浏览器</h1>
+
+                <p>猎豹安全浏览器，是由猎豹移动公司（原金山网络）推出的一款浏览器，主打安全与极速特性，采用Trident和WebKit双渲染引擎。</p>
+
+                <p><a class="btn btn-lg btn-primary" href="http://www.liebao.cn/" role="button" target="_blank">点我下载</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!--简述-->
+<div class="container" id="sketch">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 text-center">
+            <img src="img/sogou-logo.png" alt="logo1" width="150">
+            <h1>搜狗高速浏览器</h1>
+            <p>首创“网页关注”功能，将网站内容以订阅的方式提供给用户浏览。搜狗手机浏览器还具有WIFI预加载、收藏同步、夜间模式、无痕浏览、自定义炫彩皮肤、手势操作等众多易用功能。</p>
+            <p><a href="http://ie.sogou.com/" class="btn btn-default" target="_blank">点我下载</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-3 text-center">
+            <img src="img/360-logo.png" alt="logo2" width="150">
+            <h1>360安全浏览器</h1>
+            <p>和360安全卫士、360杀毒等软件等产品一同成为360安全中心的系列产品。360安全浏览器拥有全国最大的恶意网址库，采用恶意网址拦截技术，可自动拦截挂马、欺诈、网银仿冒等恶意网址。</p>
+            <p><a href="http://se.360.cn/" class="btn btn-default" target="_blank">点我下载</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-3 text-center">
+            <img src="img/QQ-logo.png" alt="logo3" width="150">
+            <h1>QQ浏览器</h1>
+            <p>QQ浏览器，采用单核模式，集超小安装包和超强稳定性于一身，访问网页速度也得到进一步优化。有效提升网页兼容性，减少系统漏洞。 其目的是为用户打造一款快速、稳定、安全、网络化的优质浏览器。</p>
+            <p><a href="http://browser.qq.com/" class="btn btn-default" target="_blank">点我下载</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-3 text-center">
+            <img src="img/liebao-logo.png" alt="logo4" width="150">
+            <h1>猎豹安全浏览器</h1>
+            <p>猎豹安全浏览器对Chrome的Webkit内核进行了超过100项的技术优化。其具有首创的智能切换引擎，动态选择内核匹配不同网页，并且支持HTML5新国际网页标准，极速浏览的同时也保证兼容性。</p>
+            <p><a href="http://www.liebao.cn/" class="btn btn-default" target="_blank">点我下载</a></p>
+        </div>
+    </div>
+
+    <hr style="margin: 40px 0;" />
+</div>
+
+<!--标签页-->
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li role="presentation" class="active"><a href="#tab-sogou" role="tab" data-toggle="tab">搜狗高速浏览器</a></li>
+        <li role="presentation"><a href="#tab-360" role="tab" data-toggle="tab">360安全浏览器</a></li>
+        <li role="presentation"><a href="#tab-QQ" role="tab" data-toggle="tab">QQ浏览器</a></li>
+        <li role="presentation"><a href="#tab-liebao" role="tab" data-toggle="tab">猎豹浏览器</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-sogou">
+            <div class="row feature">
+                <div class="col-sm-7">
+                    <h1>搜狗高速浏览器</h1>
+                    <p>一次开发可用于两个核心首创应用一次开发即可用于两个核心的“双核应用平台”，经过大量的技术创新，使得搜狗高速浏览器的扩展能够在IE兼容核和高速webkit内核中均发挥作用，成为双核浏览器领域唯一具备此项技术的厂商。</p>
+                </div>
+                <div class="col-sm-5">
+                    <img src="img/sogou-logo.png" alt="logo1" width="450">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-360">
+            <div class="row feature">
+                <div class="col-sm-5">
+                    <img src="img/360-logo.jpg" alt="logo2" width="450">
+                </div>
+                <div class="col-sm-7">
+                    <h1>360安全浏览器</h1>
+                    <p>拦截广告：视频广告、网页广告、运营商劫持广告、百度搜索广告拦截，统统实现。<br/>登录管家：不用记密码，登录管家一键安全登录常用网站。<br/>视频加速：智能加速，独有影院模式，看视频更爽更流畅。<br/>游戏加速：游戏卡、进度慢，游戏模式加速功能全搞定。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-QQ">
+            <div class="row feature">
+                <div class="col-sm-7">
+                    <h1>QQ浏览器</h1>
+                    <p>QQ浏览器9.0版发布，Chrome Tab 高速组件+自带IE高级内核，浏览快速稳定，拒绝卡顿，在稳定性、流畅度均大幅革新，在技术架构上做了创新性的探索，冷启动速度在实验室环境下达到了0.3秒，UI和功能的响应速度也追求零延迟。</p>
+                </div>
+                <div class="col-sm-5">
+                    <img src="img/QQ-logo.png" alt="logo3" width="450">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-liebao">
+            <div class="row feature">
+                <div class="col-sm-5">
+                    <img src="img/liebao-logo.jpg" alt="logo4" width="450">
+                </div>
+                <div class="col-sm-7">
+                    <h1>猎豹浏览器</h1>
+                    <p>优化UI主框架：并发处理多项任务，界面开启更迅速<br/>智能预加载动态库：推迟非紧急启动加载项，大幅提高启动性能<br/>并行加载数据库：瞬间载入海量历史数据，不再影响浏览器启动<br/>优化HOOK引擎：保持浏览器高速运行的同时打通双核数据共用<br/>统一功能入口点：UI主线程同时完成多个功能的初始化，提升启动速度<br/>新一代进程模型：减少新进程创建的开销，加速新标签开启<br/>优化Plugin进程：加速渲染前进或者后退的页面，切换更快速<br/>Render Shadow渲染进程：免去初始化时间，提升切换到IE内核的速度，猎豹追求极致，持续的优化和加速是猎豹的生命。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr style="margin-top: 40px;"/>
+    <footer>
+        <p class="pull-right"><a href="#">回到顶部</a></p>
+        <p>&copy; 2016 xxx 版权所有 </p>
+    </footer>
+</div>
+
+<!--模态框 弹出提示框-->
+<div class="modal fade" id="about">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>慕课网隶属于北京慕课科技中心(有限合伙)，是一家从事互联网免费教学的网络教育公司。秉承“开拓、创新、公平、分享”的精神， 将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌。</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">了解</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-nav a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
